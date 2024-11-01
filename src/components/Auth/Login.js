@@ -20,11 +20,15 @@ function Login() {
   };
 
   return (
-    <form onSubmit={handleLogin}>
-      <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" required />
-      <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Mot de passe" required />
-      <button type="submit">Connexion</button>
-    </form>
+    < >
+      <h2 className='container mt-5'> Connexion Utilisateur</h2>
+      <form className='container' onSubmit={handleLogin}>
+        <input type="email" className='form-control' value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" required />
+        <input type="password" className='form-control' value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Mot de passe" required />
+        <button type="submit" className='btn btn-primary'>Connexion</button>
+      </form>
+    </>
+    
   );
 }
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-function Login() {
+function Register() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -20,12 +20,15 @@ function Login() {
   };
 
   return (
-    <form onSubmit={handleLogin}>
-      <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" required />
-      <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Mot de passe" required />
-      <button type="submit">Connexion</button>
-    </form>
+    <>
+      <h2 className='container mt-5' > Créer un compte </h2>
+      <form className='container' onSubmit={handleLogin}>
+        <input className='form-control' type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" required />
+        <input className='form-control' type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Mot de passe" required />
+        <button className='btn btn-primary' type="submit">Connexion</button>
+      </form>
+    </>
   );
 }
 
-export default Login;
+export default Register;
